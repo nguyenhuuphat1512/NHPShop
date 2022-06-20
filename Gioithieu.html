@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <link rel="stylesheet" href="ASM_1/index.css">
+    <link rel="stylesheet" href="Trangbanhang.css">
+    <link rel="stylesheet" href="Gioithieu.css">
+    <script>
+        var images = [];
+        for (let i = 1; i < 5; i++) {
+            images[i] = new Image();
+            images[i].src = "Hinh_Anh/slide/" + i + ".png";
+        }
+
+        var index = 1;
+        var t;
+
+        function first() {
+            index = 1;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+
+        function last() {
+            index = images.length - 1;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+
+        function next() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+
+        function fstart() {
+            t = window.setInterval(next, 2000);
+        }
+
+        function prev() {
+            index--;
+            if (index < 0) {
+                index = images.length - 1;
+            }
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+        }
+    </script>
+</head>
+
+<body onload="fstart();">
+    <div class="wraper">
+        <header>
+            <!--banner logo-->
+
+            <div class="top">
+                Trang mua hàng trực tuyến chính hãng
+            </div>
+            <div id="main hearder">
+                <div class="hearder-mid">
+                    <div class="tenshop">
+                        <a href="index.html">NHPShop</a>
+                    </div>
+                    <div class="timkiem">
+                        <form action="" class="search">
+                            <input type="text" placeholder=" Tìm kiếm sản phẩm...">
+                            <button id="nut" type="submit">
+                            <img src="Hinh_Anh/icon=search.png" id="img">
+                        </button>
+
+                        </form>
+                    </div>
+                    <div class="thongtinkhac">
+                        <div class="dangnhap">
+                            <img src="Hinh_Anh/icon-name2.png" id="icon-name">
+                            <span id="chu-login"><a href="form2.html">Đăng nhập / Đăng ký</a> </span> &emsp; <span id="chu-login"> <a href="form2.html">Tài khoản của tôi</a> </span>
+                        </div>
+                        <div class="cart">
+                            <img src="Hinh_Anh/cart.jpg" id="icon-cart">
+                            <span id="chu-cart">Giỏ hàng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hearder-bottom">
+                    <div class="khung nav">
+                        <nav class="menu">
+                            <ul>
+                                <li>
+                                    <a href="index.html">TRANG CHỦ</a></li>
+                                <li>
+                                    <a href="Trangbanhang.html">SẢN PHẨM</a></li>
+                                <li>
+                                    <a href="Blog.html">BLOG</a></li>
+                                <li>
+                                    <a href="Gioithieu.html">GIỚI THIỆU</a></li>
+                                <li>
+                                    <a href="lienhe.html">LIÊN HỆ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+            </div>
+        </header>
+        <!-- slide-->
+
+        <img id="anh" src="Hinh_Anh/slide/1.png" width="100%">
+        <button onclick="next()" id="next" class="next">></button>
+        <button onclick="prev()" id="prev" class="pev"><</button>
+
+
+        <div class="phangt">
+            <div class="khungt">
+                <p>N H P SHOP trang bán hàng trực tuyến chất lượng cao, với đội ngủ nhân viên ưu tú, hỗ trợ trức tuyến khách hàng 24/7,đảm bào giao hàng nhanh và gói hàng kĩ lưỡng. Thêm vào đó là nhiều trương trình khuyến mãi siêu ưu đãi vào mua hè dành
+                    cho học sinh sinh viên lên đến 7% ngoài ra còn các món qà hấp dẫn khách đang cho đón quý khách!!!</p>
+            </div>
+        </div>
+    </div>
+    <div class="lienhe">
+        <h1>HÃY LIÊN HỆ VỚI CHÚNG TÔI!</h1> <br>
+        <p>Luôn sẳn sàng hỗ trợ và tư vấn cho bạn để có sản phẩm tốt nhất</p>
+        <div class="timkiem2">
+            <form action="" class="search">
+                <input type="text" placeholder="  Nhập email của bạn...">
+                <div class="gui">
+                    <a href="#">GỬI</a>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div class="hotro">
+        <div class="set">
+            <div class="hotro1">
+                <div class="ship">
+                    <img src="Hinh_Anh/sp hot/ship.jpg" alt="" width="130px">
+                    <div class="chusp">
+                        <h5>Giao hàng nhanh chóng</h5>
+                        <p>Miễn phí với đơn hàng 3 triệu.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hotro2">
+                <div class="chinhsach">
+                    <img src="Hinh_Anh/sp hot/chinh-sach.png" width="100px" alt="">
+                    <div>
+                        <div class="chusp2">
+                            <h5>Chính sách bảo hành</h5>
+                            <p>Bảo hành 12 tháng, đổi trả 15 ngày.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hotro3">
+                <div class="chinhsach">
+                    <img src="Hinh_Anh/sp hot/support.png" width="90px" alt="">
+                    <div class="chusp3">
+                        <h5>Hỗ trợ 24/7</h5>
+                        <p>Với các kênh chat, email & phone.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ttlh">
+        <div class="khung2">
+            <div class="ttlh1">
+                <h6>Giới Thiệu</h6> <br>
+                <p>Trang sản phẩm trực tuyến giúp bạn tiếp cận xu hướng công nghệ mới nhất.</p> <br>
+                <img class="icon-gt" src="Hinh_Anh/sp hot/logo gt.jpg" width="200px" alt="">
+            </div>
+            <div class="ttlh2">
+                <h6>Liên kết</h6>
+                <div class="chuttlh2">
+                    <p>- Tìm kiếm <br> <br> - Giới thiệu <br><br> - Chính sách đổi trả <br><br> - Chính sách bảo mật <br><br> - Điều khoản dịch vụ</p>
+                </div>
+
+            </div>
+            <div class="ttlh3">
+                <h6>Thông tin liên hệ</h6>
+                <div class="icon-ttlh">
+                    <img src="Hinh_Anh/sp hot/dinh-vi.png" width="20px" alt=""> <br> <br>
+                    <img src="Hinh_Anh/sp hot/phone.png" width="20px" alt=""> <br> <br>
+                    <img src="Hinh_Anh/sp hot/email.png" width="20px" alt="">
+                </div>
+                <div class="chuttlh3">
+                    <p class="chucd">Cao đẳng FPT Polytechnic</p> <br> <br>
+                    <p class="sdt">0942785922</p> <br>
+                    <p class="chuemail">nhanntpc03225@fpt.edu.vn</p> <br>
+                    <p>phatnhpc03775@fpt.edu.vn</p> <br>
+                    <p>&emsp; &ensp; &nbsp; &nbsp; huydtpc03761@fpt.edu.vn</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p>Design by: Ngô Thanh Nhân</p>
+        <div class="foo">
+            <p>Nguyễn Hữu Phát</p>
+            <p>Đoàn Thanh Huy</p>
+        </div>
+    </footer>
+    </div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0&appId=424516602800501&autoLogAppEvents=1" nonce="GHwZdrKB"></script>
+    <script src="https://uhchat.net/code.php?f=1b8c36"></script>
+</body>
+
+</html>
